@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    background-color: yellow; /* Fondo amarillo */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.ruleta {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(red 0deg 60deg, white 60deg 120deg, red 120deg 180deg, white 180deg 240deg, red 240deg 300deg, white 300deg 360deg); /* Ruleta roja y blanca */
+    margin: 20px auto;
+    border: 5px solid black;
+}
+
+.premio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;  /* Ajustamos el ancho de cada premio */
+    height: 30px; /* Altura de los premios */
+    text-align: center;
+    line-height: 30px; /* Centrado vertical */
+    font-size: 14px; /* Ajuste de tamaño de texto */
+    color: black;
+    transform-origin: 50% 100%; /* Rotación de cada premio en el borde inferior */
+}
+
+.premio:nth-child(1) { transform: rotate(0deg) translateY(-140px); }
+.premio:nth-child(2) { transform: rotate(60deg) translateY(-140px); }
+.premio:nth-child(3) { transform: rotate(120deg) translateY(-140px); }
+.premio:nth-child(4) { transform: rotate(180deg) translateY(-140px); }
+.premio:nth-child(5) { transform: rotate(240deg) translateY(-140px); }
+.premio:nth-child(6) { transform: rotate(300deg) translateY(-140px); }
+
+.btn {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
